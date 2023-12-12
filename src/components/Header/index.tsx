@@ -48,7 +48,7 @@ export function Header() {
           </li>
           <li className="">
             <a className="" href="/">
-              Sobre nós
+              Sobre
             </a>
           </li>
           <li className="">
