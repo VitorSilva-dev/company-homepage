@@ -22,8 +22,12 @@ a:hover {
 }
 
 @media (max-width: 999px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
     body {
-      overflow: hidden;
+        position: relative;
     }
 }
 `;
