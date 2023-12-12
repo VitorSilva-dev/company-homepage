@@ -5,13 +5,15 @@ export function Header() {
     const navLinks = document.querySelectorAll(".nav-list li");
 
     navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`);
+      if (link instanceof HTMLElement) {
+        link.style.animation
+          ? (link.style.animation = "")
+          : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`);
+      }
     });
-  }
+  };
 
   const handleClickMenu = () => {
     const mobileMenu = document.querySelector(".mobile-menu");
