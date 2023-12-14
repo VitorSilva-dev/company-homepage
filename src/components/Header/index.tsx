@@ -1,4 +1,4 @@
-import { HeaderContainer } from "./styles";
+import { HeaderContainer, FooterLinksMenuGroupListItem } from "./styles";
 
 import logo from "../../assets/smithslogo.png";
 
@@ -47,30 +47,30 @@ export function Header() {
         </div>
 
         <ul className="nav-list">
-          <li
+        <FooterLinksMenuGroupListItem
             onClick={() => {
               handleClickMenu();
               scrollToSection("home");
             }}
           >
             <a href="#">Home</a>
-          </li>
-          <li
+          </FooterLinksMenuGroupListItem>
+          <FooterLinksMenuGroupListItem
             onClick={() => {
               handleClickMenu();
               scrollToSection("about");
             }}
           >
             <a href="#About">Sobre</a>
-          </li>
-          <li
+          </FooterLinksMenuGroupListItem>
+          <FooterLinksMenuGroupListItem
             onClick={() => {
               handleClickMenu();
               scrollToSection("contact");
             }}
           >
             <a href="#Contact">Contato</a>
-          </li>
+          </FooterLinksMenuGroupListItem>
         </ul>
       </nav>
     </HeaderContainer>

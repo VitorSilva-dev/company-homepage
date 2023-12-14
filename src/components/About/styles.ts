@@ -9,15 +9,33 @@ export const AboutContainer = styled.section`
   display: flex;
   flex-direction: column;
 
-  height: 92vh;
-  margin-top: 3rem;
-
+  height: 100%;
   gap: 3.5rem;
 
-  margin-left: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @media (min-width: 1536px) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 
   @media (max-width: 768px) {
     margin-left: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 `;
 
@@ -52,8 +70,15 @@ export const AboutImagesContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 
-  padding: 0 1rem 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-bottom: 2.75rem;
+
+  @media (min-width: 1024px) {
+    margin-top: 4rem;
+    margin-right: 5rem;
+    margin-bottom: 4rem;
+  }
 `;
 
 export const AboutImage = styled.img<MyImageProps>`
@@ -72,18 +97,37 @@ export const AboutImage = styled.img<MyImageProps>`
 
       width: 24rem;
 
+      @media (min-width: 1024px) {
+        width: 100%;
+        left: -50%;
+        bottom: -4rem;
+      }
+
       @media (max-width: 768px) {
         width: 14rem;
         right: 1rem;  
         bottom: -4rem;
       }
+
+      @media (min-width: 640px) {
+        width: 24rem;
+      }
+
+      @media (min-width: 1536px) {
+        min-width: 30vw;
+        right: 12rem; 
+      }
     `
       : `
       width: 15rem;
-
+      
       @media (max-width: 768px) {
         width: 12rem;
         bottom: -5rem;
       }      
+
+      @media (min-width: 1024px) {
+        width: 24rem;
+      }
     `};
 `;

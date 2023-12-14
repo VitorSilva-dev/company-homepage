@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SeparatorLine = styled.div`
   --tw-bg-opacity: 1;
-  background-color: rgb(251 191 36 / var(--tw-bg-opacity));
+  background-color: #870c0c;
 
   width: 2.5rem;
   height: 0.25rem;

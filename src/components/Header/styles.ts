@@ -111,6 +111,44 @@ export const HeaderContainer = styled.header`
   }
 `;
 
+export const FooterLinksMenuGroupListItem = styled.li`
+  > a {
+    cursor: pointer;
+    text-decoration: none;
+
+    color: #fff;
+    background: transparent;
+
+    position: relative;
+
+    &:hover {
+      color: #870c0c;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -0.25rem;
+
+      height: 0.225rem;
+      width: 0;
+
+      border-radius: 0.25rem;
+
+      transition: 0.1s all ease-in-out;
+
+      background: linear-gradient(45deg, #870c0c, #870c0c);
+    }
+
+    &:hover::before {
+      width: 1.5rem;
+    }
+  }
+`;
+
 export const Logo = styled.img`
   content: url(${logo});
   alt: ${(props) => props.alt};
