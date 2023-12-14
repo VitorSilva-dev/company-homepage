@@ -6,15 +6,21 @@ interface MyImageProps {
 }
 
 export const AboutContainer = styled.section`
+  background: #ffffff;
   display: flex;
   flex-direction: column;
+
+  z-index: 10;
+  position: relative;
 
   height: 100%;
   gap: 3.5rem;
 
   padding-top: 5rem;
   padding-bottom: 5rem;
-  padding-left: 5rem;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -24,38 +30,34 @@ export const AboutContainer = styled.section`
     padding-bottom: 10rem;
   }
 
-  @media (min-width: 1536px) {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-
   @media (max-width: 768px) {
     margin-left: 1.5rem;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
+  @media (min-width: 1536px) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 `;
 
-export const AboutTitle = styled.strong`
-  color: #0a0a0a;
-  font-weight: 700;
-
-  font-size: 1.875rem;
-  line-height: 1.25;
-`;
-
-export const AboutDescription = styled.p`
-  color: #7d8a92;
-  font-weight: 500;
-  /* color: #404040; */
+export const AboutDescriptionContainer = styled.div`
   max-width: 45rem;
+  margin-top: 2.5rem;
 
   @media (max-width: 768px) {
     max-width: 20rem;
   }
+`;
+
+export const AboutDescription = styled.p`
+  color: #404040;
+  font-weight: 500;
+  /* color: #7d8a92; */
 
   margin-top: 1rem;
 
