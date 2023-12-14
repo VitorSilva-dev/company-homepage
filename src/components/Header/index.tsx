@@ -1,5 +1,7 @@
 import { HeaderContainer } from "./styles";
 
+import logo from "../../assets/smithslogo.png";
+
 export function Header() {
   const animateLinks = () => {
     const navLinks = document.querySelectorAll(".nav-list li");
@@ -24,10 +26,19 @@ export function Header() {
     animateLinks();
   };
 
+  const scrollToSection = (section: string) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <HeaderContainer>
       <nav>
-        <a className="logo">Smith's</a>
+        {/* <a className="logo">Smith's</a> */}
+        {/* <Logo alt="Smith's" /> */}
+        <img src={logo} alt="Smith's" width={50} onClick={() => scrollToSection("home")} />
 
         <div className="mobile-menu" onClick={handleClickMenu}>
           <div className="line1"></div>
@@ -36,30 +47,29 @@ export function Header() {
         </div>
 
         <ul className="nav-list">
-          <li className="">
-            <a className="" href="/">
-              Home
-            </a>
+          <li
+            onClick={() => {
+              handleClickMenu();
+              scrollToSection("home");
+            }}
+          >
+            <a href="#">Home</a>
           </li>
-          <li className="">
-            <a className="" href="/">
-              Clientes
-            </a>
+          <li
+            onClick={() => {
+              handleClickMenu();
+              scrollToSection("about");
+            }}
+          >
+            <a href="#About">Sobre</a>
           </li>
-          <li className="">
-            <a className="" href="/">
-              Sobre
-            </a>
-          </li>
-          <li className="">
-            <a className="" href="/">
-              Projetos
-            </a>
-          </li>
-          <li className="">
-            <a className="" href="/">
-              Contato
-            </a>
+          <li
+            onClick={() => {
+              handleClickMenu();
+              scrollToSection("contact");
+            }}
+          >
+            <a href="#Contact">Contato</a>
           </li>
         </ul>
       </nav>

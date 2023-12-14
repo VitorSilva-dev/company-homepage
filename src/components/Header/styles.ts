@@ -1,7 +1,18 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
+import logo from "../../assets/smithslogo.png";
+
 export const HeaderContainer = styled.header`
+  a {
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+
   .logo {
     font-size: 24px;
     text-transform: uppercase;
@@ -10,8 +21,9 @@ export const HeaderContainer = styled.header`
 
   nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 3.5rem;
     background: #23232e;
     height: 8vh;
   }
@@ -49,9 +61,16 @@ export const HeaderContainer = styled.header`
       background: #23232e;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      /* justify-content: space-around; */
+      padding-top: 2rem;
+      gap: 2.5rem;
       transform: translateX(100%);
       transition: transform 0.3s ease-in;
+    }
+
+    a {
+      font-size: 1.25rem;
+      font-weight: 700;
     }
 
     .nav-list li {
@@ -90,4 +109,11 @@ export const HeaderContainer = styled.header`
       transform: rotate(45deg) translate(-5px, -7px);
     }
   }
+`;
+
+export const Logo = styled.img`
+  content: url(${logo});
+  alt: ${(props) => props.alt};
+
+  width: 10px;
 `;

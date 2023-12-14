@@ -8,17 +8,12 @@ export const GlobalStyles = createGlobalStyle`
 
     box-sizing: border-box;
 
-    font-family: "Roboto", sans-serif;
+    font-family: "Plus Jakarta Sans";
+    color: ${theme.colors.white};
 }
 
 a {
-    color: ${theme.colors.white};
     text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    opacity: 0.7;
 }
 
 @media (max-width: 999px) {
