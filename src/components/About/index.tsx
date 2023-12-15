@@ -4,8 +4,9 @@ import {
   AboutImage,
   AboutDescriptionContainer,
   AboutContainer,
+  AboutTitle,
+  AboutSeparatorLine,
 } from "./styles";
-import { Title } from "../Title";
 
 import image1 from "../../assets/ryoan-sushi-bar.jpg";
 import image2 from "../../assets/ryoan-sushi-bar-2.jpg";
@@ -14,7 +15,8 @@ export function About() {
   return (
     <AboutContainer id="about">
       <div>
-        <Title text="Sobre a Smith's" />
+        <AboutTitle>Sobre a Smith's</AboutTitle>
+        <AboutSeparatorLine />
         <AboutDescriptionContainer>
           <AboutDescription>
             Bem-vindo à Smith's, onde a tradição da culinária oriental encontra

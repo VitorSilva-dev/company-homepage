@@ -1,4 +1,4 @@
-import { HeaderContainer, FooterLinksMenuGroupListItem } from "./styles";
+import { HeaderContainer, FooterLinksMenuGroupListItem, Logo } from "./styles";
 
 import logo from "../../assets/smithslogo.png";
 
@@ -36,9 +36,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <nav>
-        {/* <a className="logo">Smith's</a> */}
-        {/* <Logo alt="Smith's" /> */}
-        <img src={logo} alt="Smith's" width={50} onClick={() => scrollToSection("home")} />
+        <Logo $imageSrc={logo} />
 
         <div className="mobile-menu" onClick={handleClickMenu}>
           <div className="line1"></div>
@@ -47,7 +45,7 @@ export function Header() {
         </div>
 
         <ul className="nav-list">
-        <FooterLinksMenuGroupListItem
+          <FooterLinksMenuGroupListItem
             onClick={() => {
               handleClickMenu();
               scrollToSection("home");

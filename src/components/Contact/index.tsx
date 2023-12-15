@@ -1,4 +1,3 @@
-import { Title } from "../Title";
 import {
   ContactContainer,
   ContactContent,
@@ -6,7 +5,9 @@ import {
   ContactProfile,
   ContactProfileInfosContainer,
   ContactProfileLinksContainer,
+  ContactSeparatorLine,
   ContactSubtitleText,
+  ContactTitle,
 } from "./styles";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -26,7 +27,8 @@ export function Contact() {
   return (
     <ContactContainer id="contact">
       <div>
-        <Title text="Contato" />
+        <ContactTitle>Contato</ContactTitle>
+        <ContactSeparatorLine />
         <ContactSubtitleText>Contato dos desenvolvedores.</ContactSubtitleText>
       </div>
 

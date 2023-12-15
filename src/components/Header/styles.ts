@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
-import logo from "../../assets/smithslogo.png";
+interface LogoProps {
+  $imageSrc: string;
+}
 
 export const HeaderContainer = styled.header`
   a {
@@ -149,9 +151,7 @@ export const FooterLinksMenuGroupListItem = styled.li`
   }
 `;
 
-export const Logo = styled.img`
-  content: url(${logo});
-  alt: ${(props) => props.alt};
-
-  width: 10px;
+export const Logo = styled.img<LogoProps>`
+  content: url(${({ $imageSrc }) => $imageSrc});
+  width: 5vh;
 `;

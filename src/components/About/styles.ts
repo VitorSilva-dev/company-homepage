@@ -22,14 +22,6 @@ export const AboutContainer = styled.section`
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    justify-content: space-between;
-
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
   @media (max-width: 768px) {
     margin-left: 1.5rem;
   }
@@ -39,10 +31,37 @@ export const AboutContainer = styled.section`
     padding-right: 5rem;
   }
 
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
   @media (min-width: 1536px) {
     padding-left: 8rem;
     padding-right: 8rem;
   }
+`;
+
+export const AboutTitle = styled.strong`
+  color: #0a0a0a;
+  font-weight: 700;
+
+  font-size: 1.875rem;
+  line-height: 1.25;
+`;
+
+export const AboutSeparatorLine = styled.div`
+  --tw-bg-opacity: 1;
+  background-color: #870c0c;
+
+  width: 2.5rem;
+  height: 0.25rem;
+
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
 `;
 
 export const AboutDescriptionContainer = styled.div`
